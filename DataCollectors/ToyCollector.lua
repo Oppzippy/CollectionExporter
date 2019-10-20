@@ -51,7 +51,11 @@ function ToyCollector:Collect()
 	local prevSettings = GetToyBoxSettings()
 	SetToyBoxSettings(toyBoxSettings)
 	for i = 1, C_ToyBox.GetNumFilteredToys() do
-		collection[#collection+1] = C_ToyBox.GetToyFromIndex(i)
+		local itemID = C_ToyBox.GetToyFromIndex(i)
+		collection[#collection+1] = {
+			id = itemID,
+			name = GetItemInfo(itemID),
+		}
 	end
 	SetToyBoxSettings(prevSettings)
 	return collection
