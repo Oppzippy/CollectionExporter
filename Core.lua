@@ -1,6 +1,9 @@
 CollectionExporter = {}
 local addon = CollectionExporter
 
+local json = LibStub("json.lua")
+local LibCopyPaste = LibStub("LibCopyPaste-1.0")
+
 local dataCollectors = {}
 function addon:RegisterDataCollector(collector)
 	assert(type(collector.name) == "string", "DataCollectors must have a name.")
@@ -14,4 +17,12 @@ function addon:Collect()
 		collection[collector.name] = collector:Collect()
 	end
 	return collection
+end
+
+function addon:CollectJSON()
+	json.encode(self:Collect())
+end
+
+function addon:Copy(text)
+	LibCopyPaste:Copy("CollectionExporter", text)
 end

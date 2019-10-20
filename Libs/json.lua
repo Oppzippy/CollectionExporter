@@ -22,7 +22,8 @@
 -- SOFTWARE.
 --
 
-local json = { _version = "0.1.2" }
+local json = LibStub:NewLibrary("json.lua", 1)
+json._version = "0.1.2"
 
 -------------------------------------------------------------------------------
 -- Encode
@@ -395,6 +396,3 @@ function json.decode(str)
   end
   return res
 end
-
-
-return json

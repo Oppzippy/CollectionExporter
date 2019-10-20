@@ -10,5 +10,6 @@
 #@end-non-debug@
 
 Locales\Locales.xml
+Libs.xml
 Core.lua
 DataCollectors\DataCollectors.xml
