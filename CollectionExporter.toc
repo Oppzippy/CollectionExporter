@@ -1,0 +1,14 @@
+## Interface: 80205
+## Title: Collection Exporter
+## Notes: Export bags, toys, xmog, etc. to JSON.
+## Author: Oppzippy
+## Version: @project-version@
+## OptionalDeps: LibCopyPaste-1.0, Ace3
+
+#@non-debug@
+# Libs\AceLocale-3.0\AceLocale-3.0.xml
+#@end-non-debug@
+
+Locales\Locales.xml
+Core.lua
+DataCollectors\DataCollectors.xml
