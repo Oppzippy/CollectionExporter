@@ -1,4 +1,4 @@
-package-as: CopyAnything
+package-as: CollectionExporter
 enable-nolib-creation: no
 
 externals:
