@@ -30,7 +30,6 @@ function InventoryCollector:Collect()
 			collectedItems[id] = true
 			collection[#collection+1] = {
 				id = id,
-				name = item:GetItemName(),
 				count = GetItemCount(id, false, false), -- exclude bank and charges
 			}
 		end
