@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-    <!--@non-debug@
+	<!--@non-debug@
 	<Script file="Libs\LibStub\LibStub.lua"/>
 	<Include file="Libs\AceAddon-3.0\AceAddon-3.0.xml"/>
 	<Include file="Libs\AceLocale-3.0\AceLocale-3.0.xml"/>
@@ -9,7 +9,8 @@
 	<Include file="Libs\AceConfig-3.0\AceConfig-3.0.xml"/>
 	<Include file="Libs\AceDB-3.0\AceDB-3.0.xml"/>
 	<Include file="Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml"/>
-    <Script file="Libs\LibCopyPaste-1.0\LibCopyPaste-1.0.lua"/>
-    @end-non-debug@-->
+	<Script file="Libs\LibCopyPaste-1.0\LibCopyPaste-1.0.lua"/>
+	<Script file="Libs\LibDeflate\LibDeflate.lua"/>
+	@end-non-debug@-->
 	<Script file="Libs\json.lua"/>
 </Ui>
