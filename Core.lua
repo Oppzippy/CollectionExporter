@@ -41,3 +41,10 @@ end
 function addon:Copy(text)
 	LibCopyPaste:Copy("CollectionExporter", text)
 end
+
+function addon:SlashCommand(msg)
+	InterfaceOptionsFrame_OpenToCategory("CollectionExporter")
+end
+
+addon:RegisterChatCommand("collectionexporter", "SlashCommand")
+addon:RegisterChatCommand("cexp", "SlashCommand")

@@ -1,5 +1,5 @@
 ## Interface: 80205
-## Title: Collection Exporter
+## Title: CollectionExporter
 ## Notes: Export bags, toys, xmog, etc. to JSON.
 ## Author: Oppzippy
 ## Version: @project-version@
