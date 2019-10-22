@@ -44,3 +44,34 @@ Example data:
     }
 }
 ```
+
+Full list of transmog gear types:
+- head
+- shoulder
+- back
+- chest
+- shirt
+- tabard
+- wrist
+- hands
+- waist
+- legs
+- feet
+- wands
+- oneHandedAxes
+- oneHandedSwords
+- oneHandedMaces
+- daggers
+- fistWeapons
+- shields
+- heldInOffHand
+- twoHandedAxes
+- twoHandedSwords
+- twoHandedMaces
+- staves
+- polearms
+- bows
+- guns
+- crossbows
+- warglaives
+- legionArtifacts
