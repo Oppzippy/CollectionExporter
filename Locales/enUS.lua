@@ -15,4 +15,4 @@ L.inventory = INVENTORY_TOOLTIP
 L.mounts = MOUNTS
 L.characterInfo = "Character Info (name, etc.)"
 L.toys = "Toys"
-L.transmog = "Transmog (requires compression for copy)"
+L.transmog = "Transmog (requires compression for Export to Clipboard)"
