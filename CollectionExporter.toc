@@ -6,12 +6,8 @@
 ## OptionalDeps: LibCopyPaste-1.0, Ace3, LibDeflate
 ## SavedVariables: CollectionExporterDB, CollectionExporterData
 
-#@non-debug@
-# Libs\AceLocale-3.0\AceLocale-3.0.xml
-#@end-non-debug@
-
-Locales\Locales.xml
 Libs.xml
+Locales\Locales.xml
 Core.lua
 Options.lua
 DataCollectors\DataCollectors.xml
