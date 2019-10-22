@@ -20,17 +20,35 @@ local options = {
 			name = L.general,
 			type = "group",
 			args = {
-				export = {
+				exportToClipboard = {
 					order = 1,
-					name = L.export,
+					name = L.exportToClipboard,
 					type = "execute",
 					func = function()
-						local json = addon:CollectJSON()
+						local collection = addon:Collect()
+						if addon.db.profile.compression == "none" then
+							-- Frequently causes game to crash without compression
+							collection.transmog = nil
+						end
+						local json = addon:ToJSON(collection)
 						addon:Copy(json)
 					end,
 				},
-				compression = {
+				exportToSavedVariables = {
 					order = 2,
+					name = L.exportToSavedVariables,
+					type = "execute",
+					func = function()
+						local collection = addon:Collect()
+						local json = addon:ToJSON(collection)
+						CollectionExporterData = {
+							compression = addon.db.profile.compression,
+							json = json,
+						}
+					end,
+				},
+				compression = {
+					order = 3,
 					type = "select",
 					name = L.compression,
 					values = {
@@ -40,7 +58,7 @@ local options = {
 					},
 				},
 				collectors = {
-					order = 3,
+					order = 4,
 					name = L.enabledCollectors,
 					type = "group",
 					inline = true,
@@ -77,6 +95,7 @@ function addon:UpdateOptions()
 	for i, dataCollector in ipairs(self.dataCollectors) do
 		args[dataCollector.name] = {
 			order = i,
+			width = "full",
 			name = dataCollector.displayName or L[dataCollector.name],
 			type = "toggle",
 		}

@@ -7,6 +7,7 @@ ignore = {
 	"212", -- Unused argument
 }
 globals = {
+	"CollectionExporterData",
 	"CollectionExporter",
 	"LibStub",
 	"UpdateOnBarHighlightMarksBySpell",

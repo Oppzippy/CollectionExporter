@@ -4,7 +4,7 @@
 ## Author: Oppzippy
 ## Version: @project-version@
 ## OptionalDeps: LibCopyPaste-1.0, Ace3, LibDeflate
-## SavedVariables: CollectionExporterDB
+## SavedVariables: CollectionExporterDB, CollectionExporterData
 
 #@non-debug@
 # Libs\AceLocale-3.0\AceLocale-3.0.xml

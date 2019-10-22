@@ -25,8 +25,8 @@ function addon:Collect()
 	return collection
 end
 
-function addon:CollectJSON()
-	local data = json.encode(self:Collect())
+function addon:ToJSON(collection)
+	local data = json.encode(collection)
 	local compression = addon.db.profile.compression
 	if compression == "deflate" then
 		data = LibDeflate:CompressDeflate(data)

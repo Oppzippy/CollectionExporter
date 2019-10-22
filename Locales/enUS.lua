@@ -2,7 +2,8 @@ local L = LibStub("AceLocale-3.0"):NewLocale("CollectionExporter", "enUS", true)
 
 -- Options
 L.general = GENERAL
-L.export = "Export"
+L.exportToClipboard = "Export to Clipboard"
+L.exportToSavedVariables = "Export to SavedVariables"
 L.enabledCollectors = "Enabled Collectors"
 L.compression = "Compression"
 L.none = NONE
@@ -14,4 +15,4 @@ L.inventory = INVENTORY_TOOLTIP
 L.mounts = MOUNTS
 L.characterInfo = "Character Info (name, etc.)"
 L.toys = "Toys"
-L.transmog = "Transmog"
+L.transmog = "Transmog (requires compression for copy)"
