@@ -3,7 +3,7 @@ Slash command: /collectionexporter or /cexp
 
 Example data:
 
-```js
+```json
 {
     "characterInfo": {
         "level": 120,
@@ -11,13 +11,21 @@ Example data:
         "realm": "Realmname"
     },
     "inventory": [
-        "id": 12345, // item id
-        "count": 1 // total number in bags
+        {
+            "itemID": 168313,
+            "count": 65
+        }
     ],
     "mounts": [
         {
             "name": "Brown Horse",
             "spellID": 458
+        }
+    ],
+    "toys": [
+        {
+            "itemID": 127670,
+            "name": "Accursed Tome of the Sargerei"
         }
     ],
     "transmog": {
@@ -30,15 +38,17 @@ Example data:
         ],
         "gear": {
             "waist": [
-                "visualID": 527,
-                "collectedSources": [
-                    {
-                        "sourceType": 2,
-                        "sourceID": 26165,
-                        "itemID": 53409,
-                        "itemModID": 0
-                    }
-                ]
+                {
+                    "visualID": 527,
+                    "collectedSources": [
+                        {
+                            "sourceType": 2,
+                            "sourceID": 26165,
+                            "itemID": 53409,
+                            "itemModID": 0
+                        }
+                    ]
+                }
             ]
         }
     }
