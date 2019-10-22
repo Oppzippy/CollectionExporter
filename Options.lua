@@ -9,6 +9,12 @@ local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 local options = {
 	name = "CollectionExporter",
 	type = "group",
+	set = function(info, value)
+		addon.db.profile[info[#info]] = value
+	end,
+	get = function(info)
+		return addon.db.profile[info[#info]]
+	end,
 	args = {
 		general = {
 			name = L.general,
@@ -23,8 +29,18 @@ local options = {
 						addon:Copy(json)
 					end,
 				},
-				collectors = {
+				compression = {
 					order = 2,
+					type = "select",
+					name = L.compression,
+					values = {
+						none = L.none,
+						deflate = L.deflate,
+						zlib = L.zlib,
+					},
+				},
+				collectors = {
+					order = 3,
 					name = L.enabledCollectors,
 					type = "group",
 					inline = true,
@@ -43,6 +59,7 @@ local options = {
 
 local defaultDB = {
 	profile = {
+		compression = "none",
 		blacklist = {},
 	},
 }

@@ -3,7 +3,7 @@
 ## Notes: Export bags, toys, xmog, etc. to JSON.
 ## Author: Oppzippy
 ## Version: @project-version@
-## OptionalDeps: LibCopyPaste-1.0, Ace3
+## OptionalDeps: LibCopyPaste-1.0, Ace3, LibDeflate
 ## SavedVariables: CollectionExporterDB
 
 #@non-debug@

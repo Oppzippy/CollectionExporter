@@ -4,6 +4,7 @@ addon.L = LibStub("AceLocale-3.0"):GetLocale("CollectionExporter")
 
 local json = LibStub("json.lua")
 local LibCopyPaste = LibStub("LibCopyPaste-1.0")
+local LibDeflate = LibStub("LibDeflate")
 
 addon.dataCollectors = {}
 function addon:RegisterDataCollector(collector)
@@ -25,7 +26,16 @@ function addon:Collect()
 end
 
 function addon:CollectJSON()
-	return json.encode(self:Collect())
+	local data = json.encode(self:Collect())
+	local compression = addon.db.profile.compression
+	if compression == "deflate" then
+		data = LibDeflate:CompressDeflate(data)
+		data = LibDeflate:EncodeForPrint(data)
+	elseif compression == "zlib" then
+		data = LibDeflate:CompressZlib(data, {level = 9})
+		data = LibDeflate:EncodeForPrint(data)
+	end
+	return data
 end
 
 function addon:Copy(text)
