@@ -44,6 +44,7 @@ end
 
 function addon:SlashCommand(msg)
 	InterfaceOptionsFrame_OpenToCategory("CollectionExporter")
+	InterfaceOptionsFrame_OpenToCategory("CollectionExporter")
 end
 
 addon:RegisterChatCommand("collectionexporter", "SlashCommand")
