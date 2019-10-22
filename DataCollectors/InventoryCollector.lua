@@ -29,7 +29,7 @@ function InventoryCollector:Collect()
 		if not collectedItems[id] then -- Avoid duplicates since we're counting all occurrences at once
 			collectedItems[id] = true
 			collection[#collection+1] = {
-				id = id,
+				itemID = id,
 				count = GetItemCount(id, false, false), -- exclude bank and charges
 			}
 		end

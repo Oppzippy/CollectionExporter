@@ -53,7 +53,7 @@ function ToyCollector:Collect()
 	for i = 1, C_ToyBox.GetNumFilteredToys() do
 		local itemID = C_ToyBox.GetToyFromIndex(i)
 		collection[#collection+1] = {
-			id = itemID,
+			itemID = itemID,
 			name = GetItemInfo(itemID),
 		}
 	end
