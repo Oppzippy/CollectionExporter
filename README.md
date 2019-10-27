@@ -55,6 +55,8 @@ Example data:
 }
 ```
 
+Exported transmog gear will only include gear usable by the current character's class. Warlocks will only export cloth gear, but warriors will export cloth, leather, mail, and plate. Weapon types have this same restriction. Only usable weapons are exported.
+
 Full list of transmog gear types:
 - head
 - shoulder
