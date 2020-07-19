@@ -5,7 +5,6 @@ local AceDB = LibStub("AceDB-3.0")
 local AceDBOptions = LibStub("AceDBOptions-3.0")
 local AceConfig = LibStub("AceConfig-3.0")
 local AceConfigDialog = LibStub("AceConfigDialog-3.0")
-local AceConfigCmd = LibStub("AceConfigCmd-3.0")
 
 local options = {
 	name = "CollectionExporter",
