@@ -23,6 +23,7 @@
 --
 
 local json = LibStub:NewLibrary("json.lua", 1)
+if not json then return end
 json._version = "0.1.2"
 
 -------------------------------------------------------------------------------
